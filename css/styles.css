@@ -1,0 +1,127 @@
+
+	body {
+	  margin: 20px; 
+	}
+
+	.main-block{
+	width: 900px;
+	background-color: #EFEFEF;	
+	height: 460px;
+    padding: 0px 0px 24px 3px;
+    margin: 0px auto;
+
+	}
+	.main-block h3{
+		text-align: center;padding-top: 10px;
+	}
+	.left{float: left;width: 50%;}
+	.right{float: left;width: 50%;}
+
+	.shuffle div{
+	height: 100px;
+	width: 110px;
+	display: inline-block;
+	font-size: 36px;
+	padding: 15px 20px;
+	margin-right: -4px;
+
+	}
+	.box-num3, .box-num5, .box-num9{
+	background-color:#2F453E;
+	color: #FFF;
+	text-align: center;
+	}
+	.box-num6, .box-num7{
+	
+	background-color:#BFBFBF;
+	color: #FFF;
+	text-align: center;
+	}
+	.box-num1, .box-num8{
+	background-color:#6F98A8;
+	color: #FFF;
+	text-align: center;
+	}
+	.box-num2, .box-num4{
+	background-color:#2B8EAD;
+	color: #FFF;
+	text-align: center;
+	}
+	button{
+	background-color: #2B8EAD;
+	color: #FFF;
+	border:none;
+	border-radius: 4px;	
+    padding: 16px 46px;
+    font-weight: 700;
+    margin-top: 10px;
+    margin-right: 10px;
+    outline: none;
+    cursor: pointer;
+    margin-left: 10px;
+	}
+	.text-right{
+		font-weight: 400px;text-align: right;
+	}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+
+	.main-block{
+	width: auto;
+	background-color: #FFF;
+	padding: 20px 16px;
+	min-height: 100%;
+	height: 100VH;
+	max-height: 100%;
+
+	}
+	.left{float: left;width: 100%;}
+	.right{float: left;width: 100%;display: flex;margin-bottom: 15px;}
+
+	.shuffle div{
+	height: 25px;
+	width: auto;
+	display: block;
+	font-size: 20px;
+	padding: 15px 20px;
+	margin: -2px;
+	margin-bottom: 10px;
+
+	}
+	.box-num3, .box-num5, .box-num9{
+	background-color:#EFEFEF;
+	color: #FFF;
+	text-align: center;
+	border-left: 5px solid #2F453E;
+	color: #000;
+	margin-bottom: 6px;
+	}
+	.box-num6, .box-num7{
+
+	background-color:#EFEFEF;
+	color: #FFF;
+	text-align: center;
+	border-left: 5px solid #BFBFBF;
+	color: #000;
+	margin-bottom: 6px;
+	}
+	.box-num1, .box-num8{
+	background-color:#EFEFEF;
+	color: #FFF;
+	text-align: center;
+	border-left: 5px solid #6F98A8;
+	color: #000;
+	margin-bottom: 6px;
+	}
+	.box-num2, .box-num4{
+	background-color:#EFEFEF;
+	color: #FFF;
+	text-align: center;
+	border-left: 5px solid #2B8EAD;
+	color: #000;
+	margin-bottom: 6px;
+	}
+}
+
+
+

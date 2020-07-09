@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+
+</head>
+<body>
+
+
+<div class="main-block">
+	<h3>Sort & Shuffle</h3>
+	<div class="left">
+<div id="Sortid" class="shuffle">
+  <div class="box-num1 "><label>1</label></div>
+  <div class="box-num2 "><label>2</label></div>
+  <div class="box-num3 "><label>3</label></div>
+  <div class="box-num4 "><label>4</label></div>
+  <div class="box-num5 "><label>5</label></div>
+  <div class="box-num6 "><label>6</label></div>
+  <div class="box-num7 "><label>7</label></div>
+  <div class="box-num8 "><label>8</label></div>
+  <div class="box-num9 "><label>9</label></div>
+
+</div>
+<p class="text-right">Shuffle and sort by {{ valli sk.}}</p>
+	</div>
+	<div class="right">
+		<div>
+			<button class="button" id="shuffle">Shuffle</button>
+
+		</div>
+		<div>
+		<button class="button" id="Sort" onclick="sortMe();">Sort</button>
+		</div>
+	</div>
+	
+</div>
+
+</body>
+</html>
+<script type="text/javascript">
+		
+$.fn.shuffleChildren = function() {
+  $.each(this.get(), function(index, el) {
+    var $el = $(el);
+    var $find = $el.children();
+
+    $find.sort(function() {
+      return 0.5 - Math.random();
+    });
+
+    $el.empty();
+    $find.appendTo($el);
+  });
+};
+
+$("#shuffle").click(function() {
+
+  $(".shuffle").shuffleChildren();
+});
+
+$(window).resize(function() {
+  if ($(window).width() <= 500) {
+    $('.left').remove().insertAfter($('.right'));
+  } else {
+    $('.left').remove().insertBefore($('.right'));
+  }
+})
+$(window).load(function() {
+  if ($(window).width() <= 500) {
+    $('.left').remove().insertAfter($('.right'));
+  } else {
+    $('.left').remove().insertBefore($('.right'));
+  }
+})
+
+
+$('#Sort').click(function(){
+ var elem = $('#Sortid').find('div').sort(sortNum);
+ $('#Sortid').append(elem);
+});
+
+
+function sortNum(a, b) {
+   var a = $(a).text().toUpperCase();
+   var b = $(b).text().toUpperCase();
+   return (a < b) ? -1 : (a > b) ? 1 : 0;
+}
+
+</script>
